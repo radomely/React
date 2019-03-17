@@ -6,7 +6,7 @@ import Computer from './Computer/Computer';
 import Programming from './Programming/Programming'
 import User from './User/User';
 import './App.css';
-// import { timingSafeEqual } from 'crypto';
+
 
 class App extends Component {
   state = {
