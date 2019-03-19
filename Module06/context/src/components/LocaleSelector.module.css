@@ -1,0 +1,26 @@
+.selector {
+  display: inline-flex;
+  list-style: none;
+  padding: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+
+.button {
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  padding: 4px 24px;
+  margin: 0 4px;
+  background-color: #424242;
+  color: #ffffff;
+}
+
+.active {
+  composes: button;
+  background-color: #2196f3;
+}
