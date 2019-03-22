@@ -1,17 +1,17 @@
 import React from "react";
 import Localization from "../context/localization";
-import css from "./Article.module.css";
+import styles from "./Article.module.css";
 
 export const Article = ({ title, text, linkLabel, features }) => (
-  <article className={css.article}>
-    <h3 className={css.title}>{title}</h3>
-    <p className={css.text}>{text}</p>
+  <article className={styles.article}>
+    <h3 className={styles.title}>{title}</h3>
+    <p className={styles.text}>{text}</p>
     <ul>
       {features.map(feature => (
         <li key={feature}>{feature}</li>
       ))}
     </ul>
-    <a className={css.link} href="https://reactjs.org/">
+    <a className={styles.link} href="https://reactjs.org/" target="_blank">
       {linkLabel}
     </a>
   </article>
