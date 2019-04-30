@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {add, sub, reset} from './redux/actions/counterAction';
 import Form from './redux/Form/Form';
 import './App.css';
+import Gallery from './redux/Gallery/Gallery';
+import * as actions from './redux/actions/counterAction';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <button onClick = {reset}>reset</button>
         <button onClick = {substr}>-</button>
         <Form/>
+        <Gallery/>
       </div>
     );
   }
@@ -29,13 +31,13 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return{
     add: function() {
-      dispatch(add(5))
+      dispatch(actions.add(5))
     },
     substr: function () {
-      dispatch(sub(3))
+      dispatch(actions.sub(3))
     },
     reset: function() {
-      dispatch(reset())
+      dispatch(actions.reset())
     },
   }
 }
